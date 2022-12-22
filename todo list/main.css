@@ -1,0 +1,162 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #fff;
+    background-color: #f3fcfa;
+    background-image:linear-gradient(to right,#FFFAFA);
+}
+header{
+    padding:2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1{
+    font-size: 2.5em;
+    font-weight:550;
+    color: rgba(255, 255, 255);
+    margin-top: 5em;
+    margin-bottom: 0.8em;
+    background-color:rgba(11, 126, 161, 0.8);
+    border-radius:5px;
+    text-align: center;
+    margin-right: 5em;
+    margin-left: 3em;
+}
+
+header h1 span{
+    color:rgba(33, 245, 220, 0.8);
+}
+
+#new-task-form {
+	display: flex;;
+}
+
+input, button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+}
+
+#new-task-input {
+	flex: 1 1 0%;
+	background-color: #00000061;
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-right: 1rem;
+    margin-left: 1rem;
+	color: white;
+	font-size: 1.25rem;
+}
+
+#new-task-input:placeholder{
+    color:rgb(243, 243, 243);
+}
+
+#new-task-submit{
+    color:aqua;
+    font-size: 1.5rem;
+    font-weight:700;
+    background-image:linear-gradient(to right,rgb(44, 199, 242),rgb(7, 128, 136));
+    cursor:pointer;
+    transition:0.4s;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#new-task-submit:hover{
+    opacity:0.8;
+}
+
+#new-task-submit:active{
+    opacity:0.6;
+}
+
+main{
+    flex:1 1 0%;
+    max-width: 800px;
+    width: 100%;
+    margin-left: 19rem;
+}
+
+.task-list{
+    padding:1rem;
+}
+.task-list h2 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: rgb(8, 133, 206);
+	margin-bottom: 1rem;
+}
+
+#tasks .task{
+    display:flex;
+    background-color:#00000070;
+    padding: 1rem;
+    justify-content: space-between;
+    border-radius:1rem;
+    margin-bottom: 1rem;
+}
+
+.task .content .text{
+    flex: 1 1 0%;
+}
+
+.task .content .text {
+	color: rgb(255, 250, 250);
+	font-size: 1.25rem;
+	width: 100%;
+	display: block;
+	transition: 0.4s;
+}
+
+.task .content .text:not(:read-only) {
+	color: pink;
+}
+
+.task .actions {
+	display: flex;
+	margin: 0 -0.5rem;
+}
+
+.task .actions button:hover {
+	opacity: 0.8;
+}
+
+.task .actions button:active {
+	opacity: 0.6;
+}
+
+.task .actions .edit {
+	background-image: linear-gradient(to right, rgb(17, 139, 191),rgb(18, 236, 210));
+    font-size:1rem;
+    font-weight:bold;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.task .actions .delete {
+	color: rgb(20, 220, 203);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+@media(max-width:998px){
+    html{
+        font-size: 85%;
+    }
+}
+
+@media(max-width:768px){
+    html{
+        font-size: 75%;
+    }
+}
